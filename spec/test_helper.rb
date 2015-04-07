@@ -30,6 +30,7 @@ AttributeNormalizer.configure do |config|
 
   config.default_normalizers = :strip, :special_normalizer, :blank
 
+  config.default_attributes = :country
 end
 
 
@@ -42,6 +43,7 @@ require 'models/magazine'
 require 'models/publisher'
 require 'models/person'
 require 'models/user'
+require 'models/conference'
 
 RSpec.configure do |config|
   config.include AttributeNormalizer::RSpecMatcher

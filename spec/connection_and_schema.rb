@@ -31,6 +31,7 @@ ActiveRecord::Schema.define do
 
   create_table :journals, :force => true do |t|
     t.string  :name
+    t.string  :country
   end
 
   create_table :articles, :force => true do |t|
@@ -38,9 +39,13 @@ ActiveRecord::Schema.define do
     t.string  :slug
     t.string  :limited_slug
   end
-  
+
   create_table :users, :force => true do |t|
     t.string :firstname
     t.string :lastname
+  end
+
+  create_table :conferences, :force => true do |t|
+    t.string  :country
   end
 end
